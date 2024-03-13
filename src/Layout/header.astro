@@ -1,0 +1,72 @@
+---
+
+  
+---
+
+<header>
+    <div class="fondoHeader w-full h-24 border border-zinc-800 border-spacing-2">
+        <div class="flex h-full w-full">
+            <div class="flex justify-center items-center border border w-1/2 h-auto">
+                <div class=" flex flex-row transition-transform duration-300 transform hover:scale-125 gap-5">
+                    <h1 class="font-bold my-auto text-xl text-slate-100 cursor-pointer">Box PaKing</h1>
+                    <img src="https://svgsilh.com/svg/42185.svg" class="h-20 w-20 my-auto" alt="">
+                </div>
+            </div>
+            <div class="flex h-full w-1/2">
+                <ul class="flex justify-center h-full w-full items-center gap-8 border">
+                    <li><a href="">Home</a></li>
+                    <li class="relative" id="productosDropdown">
+                        <p class="cursor-pointer">Productos</p>
+                        <div class="absolute left-0 mt-4 bg-white border border-gray-200 rounded-sm shadow-md w-48 p-3 gap-10 hidden transition-opacity duration-500 opacity-0">
+                            <!-- Contenido del dropdown -->
+                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Bodegas</a>
+                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Frigorificos</a>
+                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Alimentos</a>
+                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Agroquimicos</a>
+                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Electrodomesticos</a>
+                        </div>
+                    </li>
+                    <li><a href="">Produccion y desarrollo</a></li>
+                    <li>Presupuesto</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<style>
+    .fondoHeader {
+        background-color: #324362;
+    }
+
+</style>
+
+
+<script>
+
+const dropDown = document.getElementById("productosDropdown")
+const clasesDropDown = dropDown.querySelector(".absolute");
+
+const mostrarDrop = ()=> {
+    clasesDropDown.classList.remove("hidden");
+    clasesDropDown.classList.add("block");
+    clasesDropDown.classList.add("opacity-100");
+}
+
+const ocultarDrop = ()=>{
+    clasesDropDown.classList.add("hidden");
+    clasesDropDown.classList.remove("block");
+    clasesDropDown.classList.remove("opacity-100")
+}
+
+const toggleDrop = () => {
+        clasesDropDown.classList.toggle("hidden");
+        clasesDropDown.classList.toggle("block");
+        clasesDropDown.classList.toggle("opacity-100");
+};
+
+    dropDown.addEventListener("click", toggleDrop);
+
+</script>
