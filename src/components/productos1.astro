@@ -1,0 +1,17 @@
+---
+const {
+    post: {tit, desc, img},
+    } = Astro.props;
+---
+
+<div class="flex items-center justify-between border w-4/5 h-4/5 mx-auto">
+    <div class="w-1/2 text-center">
+        <h2 class="text-3xl font-bold mb-5">{tit}</h2>
+        <p class="mb-5 mx-auto text-lg w-2/3">{desc}</p>
+        <button class="border rounded-lg bg-blue-600 text-slate-200 px-3 py-2">Ver más</button>
+    </div>
+    <div class="flex justify-center mx-auto">
+        <img src={img} class="h-96 transition-transform duration-300 transform hover:scale-125"alt="">
+    </div>
+
+</div>

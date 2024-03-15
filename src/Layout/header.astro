@@ -71,6 +71,10 @@ const toggleDrop = () => {
         clasesDropDown.classList.toggle("opacity-100");
 };
 
-    dropDown.addEventListener("click", toggleDrop);
+    dropDown.addEventListener("click", (event)=>{
+        event.preventDefault();
+        toggleDrop();
+
+    });
 
 </script>
