@@ -16,8 +16,8 @@ import Productos1 from "../components/productos1.astro"
 
 
 <div id="slider" class="overflow-hidden">
-    <div id="sliderInner" class="flex flex-row flex-nowrap">
-        <div class=" mb-2">
+    <div id="sliderInner" class="flex flex-row flex-nowrap ease-in duration-700">
+        <div class="">
             <Productos1 post={{tit: "Parasoles Publicitarios",
             desc: "Realizados en Cartón corrugado o microcorrugado con impresión de alta calidad. Medidas estándar, diseños doble faz, laminados.",
             img: "https://www.packbox.com.ar/images/Parasol-4-web-550x550.webp"}}/>
@@ -53,7 +53,33 @@ import Productos1 from "../components/productos1.astro"
 
 
 <script>
-    let sliderInner = document.getElementById("sliderInner");
+let sliderInner = document.getElementById("sliderInner");
+let index = 0;
+const cantidadImagenes = sliderInner.querySelectorAll("div img");
 
-    sliderInner.style.transform = "translateX(-100%)"
+let intervalId;
+
+// Función para avanzar el slider
+function avanzarSlider() {
+    let porcentaje = index * -101;
+    sliderInner.style.transform = "translateX("+ porcentaje + "%)";
+    index ++;
+    if (index > cantidadImagenes.length - 1){
+        index = 0;
+    }
+}
+
+// Inicializar el setInterval y guardar el intervalId
+intervalId = setInterval(avanzarSlider, 2000);
+
+// Detener el intervalo cuando el mouse entra en una imagen y reanudarlo cuando sale
+cantidadImagenes.forEach(function(imagen) {
+    imagen.addEventListener("mouseover", function() {
+        clearInterval(intervalId); // Detener el setInterval
+    });
+    imagen.addEventListener("mouseout", function() {
+        intervalId = setInterval(avanzarSlider, 2000); // Reanudar el setInterval
+    });
+});
+
 </script>
