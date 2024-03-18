@@ -1,5 +1,6 @@
 ---
-import Productos1 from "../components/productos1.astro"
+import Productos1 from "../components/productos1.astro";
+import Marcas from "../components/marcas.astro";
 
 ---
 
@@ -15,7 +16,7 @@ import Productos1 from "../components/productos1.astro"
 </div>
 
 
-<div id="slider" class="overflow-hidden">
+<div id="slider" class="overflow-hidden mb-1">
     <div id="sliderInner" class="flex flex-row flex-nowrap ease-in duration-700">
         <div class="">
             <Productos1 post={{tit: "Parasoles Publicitarios",
@@ -52,6 +53,25 @@ import Productos1 from "../components/productos1.astro"
 </div>
 
 
+<div class="w-3/5 mx-auto mb-5">
+    <p class="text-center text-lg">
+        Nuestros productos son la síntesis perfecta entre innovación, calidad y funcionalidad. Cada envase es cuidadosamente diseñado y fabricado con tecnologías avanzadas, asegurando una resistencia excepcional y un acabado estético impecable.
+    </p>
+</div>
+
+<div class="flex justify-around w-4/5 mx-auto my-10 items-center">
+    <img src="https://www.packbox.com.ar/images/LAS-PERDICES-LOGO.webp" class="transition-transform duration-300 transform hover:scale-125 h-8" alt="">
+    <Marcas logo={{img:"https://www.packbox.com.ar/images/ROWA-LOGO.webp"}}/>
+    <Marcas logo={{img:"https://www.packbox.com.ar/images/FRIAR-LOGO.webp"}}/>
+    <Marcas logo={{img:"https://www.packbox.com.ar/images/EPSON-LOGO.webp"}}/>
+    <Marcas logo={{img:"https://www.packbox.com.ar/images/FEFCO-LOGO.webp"}}/>
+    <Marcas logo={{img:"https://www.packbox.com.ar/images/KONGSBERG-LOGO.webp"}}/>
+
+    
+
+</div>
+
+
 <script>
 let sliderInner = document.getElementById("sliderInner");
 let index = 0;
@@ -70,7 +90,7 @@ function avanzarSlider() {
 }
 
 // Inicializar el setInterval y guardar el intervalId
-intervalId = setInterval(avanzarSlider, 2000);
+intervalId = setInterval(avanzarSlider, 5500);
 
 // Detener el intervalo cuando el mouse entra en una imagen y reanudarlo cuando sale
 cantidadImagenes.forEach(function(imagen) {
@@ -78,7 +98,7 @@ cantidadImagenes.forEach(function(imagen) {
         clearInterval(intervalId); // Detener el setInterval
     });
     imagen.addEventListener("mouseout", function() {
-        intervalId = setInterval(avanzarSlider, 2000); // Reanudar el setInterval
+        intervalId = setInterval(avanzarSlider, 5500); // Reanudar el setInterval
     });
 });
 
