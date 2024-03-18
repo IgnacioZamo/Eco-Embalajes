@@ -1,22 +1,23 @@
 ---
 import Productos1 from "../components/productos1.astro";
 import Marcas from "../components/marcas.astro";
+import Titulo from "../components/titulos.astro";
 
 ---
 
 
-<div class="w-1/3 mx-auto mt-8 border text-center p-5">
+<div class="w-1/3 mx-auto mt-8 text-center p-5">
     <h1 class="text-4xl font-semibold text-cyan-900">POTENCIAMOS TUS PRODUCTOS
         CON NUESTRAS CAJAS OFFSET</h1>
 </div>
-<div class="w-1/2 mx-auto mt-8 border text-center mb-10">
+<div class="w-1/2 mx-auto mt-8 text-center mb-10">
     <p class=" mt-5 font-bold text-xl">
         Diseñamos cajas a medida para bodegas, frigoríficos, agroquímicos, electrodomésticos, entre otros.
     </p>
 </div>
 
 
-<div id="slider" class="overflow-hidden mb-1">
+<div id="slider" class="overflow-hidden">
     <div id="sliderInner" class="flex flex-row flex-nowrap ease-in duration-700">
         <div class="">
             <Productos1 post={{tit: "Parasoles Publicitarios",
@@ -66,10 +67,22 @@ import Marcas from "../components/marcas.astro";
     <Marcas logo={{img:"https://www.packbox.com.ar/images/EPSON-LOGO.webp"}}/>
     <Marcas logo={{img:"https://www.packbox.com.ar/images/FEFCO-LOGO.webp"}}/>
     <Marcas logo={{img:"https://www.packbox.com.ar/images/KONGSBERG-LOGO.webp"}}/>
-
-    
-
 </div>
+
+<div class="bg-white py-20 border flex flex-col text-center">
+    <Titulo title={{tit:"QUIENES SOMOS"}}/>
+    <div class="flex justify-between w-full px-36 mt-12">
+        <p class="text-start text-lg w-1/2 pr-5">
+            Packing Box es una empresa argentina fundada en 2005, especializada en el diseño y fabricación de envases de cartón corrugado para diversas industrias. Destacamos por el uso de tecnologías avanzadas y procesos innovadores. <br> <br>
+Colaboramos estrechamente con marcas líderes en el mercado y PyMES, ofreciendo soluciones personalizadas que se adaptan a las necesidades de cada cliente.
+        </p>
+        <p class="text-start text-lg w-1/2 pl-5 mb-24">
+            Además, tenemos la flexibilidad de cumplir con los estándares internacionales más comunes de la industria según los requisitos del proyecto. <br><br>
+            Nuestro equipo de desarrollo técnico está comprometido en ayudar a nuestros clientes a obtener envases de última generación, destacando por su calidad y acabado perfecto.
+        </p>
+    </div>
+</div>
+
 
 
 <script>
