@@ -35,6 +35,33 @@
                     <li class=""><a href="" class="hover:text-black focus:text-amber-700 font-bold text-slate-300 text-xl border-4 border-cyan-400 rounded-3xl hover:bg-cyan-500 p-3"> Contacto</li></a>
                 </ul>
             </div>
+            <div class="lg:hidden block mr-5 my-3">
+                <button id="boton" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-10 h-10 text-slate-50 hover:cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+
+
+
+                <!-- menu responsive -->
+
+                <div id="menu-responsive" class="bg-gradient-to-b justify-center items-center flex-col from-portfolio-azul-oscuro2 to-portfolio-azul-oscuro1 w-44 h-fit right-0 top-36 rounded-lg fixed shadow-xl hidden">
+                    <div id="boton-cerrar-menu" class="ml-auto mt-3 mr-3 mb-3 hover:cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <div class="">
+                        <ul class="flex flex-col gap-5 justify-center items-center mb-10">
+                            <li><a href="#inicio" class="font-bold text-slate-200 text-xl">Inicio</a></li>
+                            <li><a href="#portfolio" class="font-bold text-slate-200 text-xl">Portfolio</a></li>
+                            <li><a href="#habilidades" class="font-bold text-slate-200 text-xl">Habilidades</a></li>
+                            <li><a href="#contacto" class="font-bold text-slate-200 text-xl">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -76,5 +103,38 @@ const toggleDrop = () => {
         toggleDrop();
 
     });
+
+
+
+    const boton = document.querySelector("#boton");
+const menuResponsive = document.querySelector("#menu-responsive");
+const cerrarMenu = document.querySelector("#boton-cerrar-menu");
+
+const menuLinks = document.querySelectorAll('#menu-responsive div ul li a[href^="#"]');
+
+
+
+boton.addEventListener("click",()=>{
+    console.log("el boton funciona");
+    menuResponsive.classList.toggle("flex");
+    menuResponsive.classList.toggle("hidden");
+
+
+})
+
+cerrarMenu.addEventListener("click",()=>{
+    console.log("el boton funciona2");
+    menuResponsive.classList.toggle("hidden");
+    menuResponsive.classList.toggle("flex");
+})
+
+menuLinks.forEach(menulink =>{
+    menulink.addEventListener("click",function(){
+    menuResponsive.classList.toggle("hidden");
+    menuResponsive.classList.toggle("flex");
+    })
+})
+
+
 
 </script>
