@@ -2,22 +2,59 @@
 import Productos1 from "../components/productos1.astro";
 import Marcas from "../components/marcas.astro";
 import Titulo from "../components/titulos.astro";
+import Tarjetas from "../components/tarjetaProd.astro";
+
 
 ---
 
 
-<div class="w-1/3 mx-auto mt-8 text-center p-5">
-    <h1 class="text-4xl font-semibold text-cyan-900">POTENCIAMOS TUS PRODUCTOS
+<div class="lg:w-1/3 w-2/3 mx-auto mt-8 text-center p-5">
+    <h1 class="lg:text-4xl text-2xl font-semibold text-cyan-900">POTENCIAMOS TUS PRODUCTOS
         CON NUESTRAS CAJAS OFFSET</h1>
 </div>
-<div class="w-1/2 mx-auto mt-8 text-center mb-10">
-    <p class=" mt-5 font-bold text-xl">
+<div class="lg:w-1/2 w-2/3 mx-auto mt-8 text-center mb-10">
+    <p class=" mt-5 lg:font-bold font-semibold lg:text-xl text-lg">
         Diseñamos cajas a medida para bodegas, frigoríficos, agroquímicos, electrodomésticos, entre otros.
     </p>
 </div>
 
 
-<div id="slider" class="overflow-hidden">
+<div class="swiper w-2/3 mx-auto ">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide-1 slide-item img-1">
+            <Tarjetas tarjeta = {{
+                img: "https://www.packbox.com.ar/images/Parasol-4-web-550x550.webp",
+                title:"Parasoles Publicitarios",
+                desc: "Realizados en Cartón corrugado o microcorrugado con impresión de alta calidad. Medidas estándar, diseños doble faz, laminados."}}/>
+        </div>
+        <div class="swiper-slide slide-2 slide-item img-2">
+            <Tarjetas tarjeta = {{
+                img: "https://www.packbox.com.ar/images/bib-3lts-bianchi-los-primos-800x800.webp",
+                title:"Estuches Bag in Box",
+                desc: "Descubre nuestros Bag in Box de cartón microcorrugado de alta calidad. Almacena, transporta y dosifica vino, gin o aceites de oliva, con el mismo empaque. Terminaciones premium y diseño funcional."}}/>
+        </div>
+        <div class="swiper-slide slide-2 slide-item img-2">
+            <Tarjetas tarjeta = {{
+                img: "https://www.packbox.com.ar/images/BIB-20LTS-BRAEM-FFO2-550x550.webp",
+                title:"Bag in Box para Químicos",
+                desc: "Soluciones premium para agroquímicos: Estuches Bag in Box, cajas a medida para bidones y botellas. Impresión OFFSET para realzar tu marca y almacenaje óptimo para tu producto."}}/>
+        </div>
+        <div class="swiper-slide slide-2 slide-item img-2">
+            <Tarjetas tarjeta = {{
+                img: "https://www.packbox.com.ar/images/frigorifico-devesa-tapa-550x550.webp",
+                title:"Cajas para Botellas Acostadas",
+                desc: "Aumentá la calidad de sus presentaciones con estuches, tanto para mercado interno como para exportaciones. Alta resistencia a la humedad y a la estiba."}}/>
+        </div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+
+
+
+
+<!-- <div id="slider" class="overflow-hidden">
     <div id="sliderInner" class="flex flex-row flex-nowrap ease-in duration-700">
         <div class="">
             <Productos1 post={{tit: "Parasoles Publicitarios",
@@ -51,7 +88,7 @@ import Titulo from "../components/titulos.astro";
         </div>
         
     </div>
-</div>
+</div> -->
 
 
 <div class="w-3/5 mx-auto mb-5">
@@ -85,8 +122,39 @@ Colaboramos estrechamente con marcas líderes en el mercado y PyMES, ofreciendo 
 
 
 
-<script>
-let sliderInner = document.getElementById("sliderInner");
+
+
+<!-- Importa el CSS de Swiper.js -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Importa el JS de Swiper.js y inicializa el slider -->
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper (".swiper", {
+	direction:"horizontal",
+    loop: true,
+    navigation:{
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+	autoplay: {
+		delay:3000
+	},
+    effect: 'flip',
+  flipEffect: {
+    slideShadows: false,
+  },
+  hashNavigation: {
+    replaceState: true,
+  },
+});
+</script>
+
+
+
+
+
+<!-- /*let sliderInner = document.getElementById("sliderInner");
 let index = 0;
 const cantidadImagenes = sliderInner.querySelectorAll("div img");
 
@@ -113,6 +181,5 @@ cantidadImagenes.forEach(function(imagen) {
     imagen.addEventListener("mouseout", function() {
         intervalId = setInterval(avanzarSlider, 5500); // Reanudar el setInterval
     });
-});
-
-</script>
+});*/
+ -->
