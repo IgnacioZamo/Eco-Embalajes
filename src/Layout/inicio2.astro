@@ -13,7 +13,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
     </p>
     
     
-        <div class="swiper w-2/3 mx-auto ">
+        <div class="swiper2 w-2/3 mx-auto ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide-1 slide-item img-1">
                     <Tarjetas tarjeta = {{
@@ -40,6 +40,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
                         desc: "Caja para cualquier producto que usted comercialise"}}/>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -52,22 +53,26 @@ import Tarjetas from "../components/tarjetaProd.astro";
 <!-- Importa el JS de Swiper.js y inicializa el slider -->
 <script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script is:inline>
-  new Swiper (".swiper", {
-	direction:"horizontal",
+  new Swiper (".swiper2", {
+	direction: "horizontal",
     loop: true,
-    navigation:{
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
     },
-	autoplay: {
-		delay:3000
-	},
-    effect: 'flip',
-  flipEffect: {
-    slideShadows: false,
-  },
-  hashNavigation: {
-    replaceState: true,
-  },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    autoplay: {
+        delay: 3000
+    },
+    speed:1200,
+    // Cambia el efecto de transición a "cube" o "coverflow"
+    effect: 'cube',
+    cubeEffect:{
+        shadow:false,
+    },
+
 });
 </script>
