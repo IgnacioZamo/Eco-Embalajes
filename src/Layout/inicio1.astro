@@ -19,7 +19,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
 </div>
 
 
-<div class="swiper-container w-4/5 mx-auto">
+<div class="swiper-container lg:w-4/5 w-10/12 mx-auto">
     <div class="swiper-wrapper">
         <div class="swiper-slide slide-1 slide-item img-1">
             <Productos1 post = {{
@@ -47,8 +47,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
         </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+
 </div>
 
 
@@ -58,7 +57,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
     </p>
 </div>
 
-<div class="flex justify-around w-4/5 mx-auto my-10 items-center">
+<div class="flex lg:gap-10 justify-around w-4/5 mx-auto my-10 items-center flex-wrap">
     <img src="https://www.packbox.com.ar/images/LAS-PERDICES-LOGO.webp" class="transition-transform duration-300 transform hover:scale-125 h-8" alt="">
     <Marcas logo={{img:"https://www.packbox.com.ar/images/ROWA-LOGO.webp"}}/>
     <Marcas logo={{img:"https://www.packbox.com.ar/images/FRIAR-LOGO.webp"}}/>
@@ -67,14 +66,14 @@ import Tarjetas from "../components/tarjetaProd.astro";
     <Marcas logo={{img:"https://www.packbox.com.ar/images/KONGSBERG-LOGO.webp"}}/>
 </div>
 
-<div class="bg-white py-20 border flex flex-col text-center">
+<div class="bg-white lg:py-20 py-5 flex flex-col text-center">
     <Titulo title={{tit:"QUIENES SOMOS"}}/>
-    <div class="flex justify-between w-full px-36 mt-12">
-        <p class="text-start text-lg w-1/2 pr-5">
+    <div class="flex lg:flex-row flex-col justify-between w-full lg:px-36 px-5 mt-12 mx-auto gap-7">
+        <p class="lg:text-start text-center lg:text-lg text-base w-1/2 lg:pr-5 pr-2 mx-auto">
             Packing Box es una empresa argentina fundada en 2005, especializada en el diseño y fabricación de envases de cartón corrugado para diversas industrias. Destacamos por el uso de tecnologías avanzadas y procesos innovadores. <br> <br>
-Colaboramos estrechamente con marcas líderes en el mercado y PyMES, ofreciendo soluciones personalizadas que se adaptan a las necesidades de cada cliente.
+            Colaboramos estrechamente con marcas líderes en el mercado y PyMES, ofreciendo soluciones personalizadas que se adaptan a las necesidades de cada cliente.
         </p>
-        <p class="text-start text-lg w-1/2 pl-5 mb-24">
+        <p class="lg:text-start text-center lg:text-lg text-base w-1/2 lg:pl-5 pl-2 mb-24 mx-auto">
             Además, tenemos la flexibilidad de cumplir con los estándares internacionales más comunes de la industria según los requisitos del proyecto. <br><br>
             Nuestro equipo de desarrollo técnico está comprometido en ayudar a nuestros clientes a obtener envases de última generación, destacando por su calidad y acabado perfecto.
         </p>
@@ -91,10 +90,7 @@ Colaboramos estrechamente con marcas líderes en el mercado y PyMES, ofreciendo 
   new Swiper (".swiper-container", {
     direction: "horizontal",
     loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

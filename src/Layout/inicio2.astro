@@ -11,8 +11,6 @@ import Tarjetas from "../components/tarjetaProd.astro";
     </div>
     <p class="w-3/5 mx-auto text-center text-lg">Envases de cartón corrugado diseñados con tecnología de vanguardia para soluciones personalizadas que satisfagan tus necesidades. ¡Descubre nuestra distinguida selección y experimenta la innovación de Packing box!
     </p>
-    
-    
         <div class="swiper2 w-2/3 mx-auto ">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide-1 slide-item img-1">
@@ -41,8 +39,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
         </div>
 </div>
 
@@ -56,10 +53,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
   new Swiper (".swiper2", {
 	direction: "horizontal",
     loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true
