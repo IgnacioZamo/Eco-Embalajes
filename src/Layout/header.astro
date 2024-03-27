@@ -14,21 +14,22 @@
             </div>
             <div class=" h-full w-2/3 lg:flex hidden">
                 <ul class="flex h-full w-full items-center gap-8 justify-evenly">
-                    <li class="font-bold text-slate-300 hover:text-amber-500 focus:text-amber-700 text-xl"><a href="#" >Home</a></li>
+                    <li class="font-bold text-slate-300 hover:text-amber-500 focus:text-amber-700 text-xl"><a href="/" >Home</a></li>
                     <li class="relative flex gap-2" id="productosDropdown">
-                        <a href="" class="cursor-pointer font-bold text-slate-300 hover:text-amber-500 focus:text-amber-700 text-xl">Productos</a>
+                        <p class="cursor-pointer font-bold text-slate-300 hover:text-amber-500 focus:text-amber-700 text-xl">Productos</p>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:pointer transition-transform duration-300 hover:scale-110 text-slate-300 my-auto">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                           
-                        <div class="absolute left-0 mt-10 bg-white border border-gray-200 rounded-sm shadow-md w-48 p-3 gap-10 hidden transition-opacity duration-500 opacity-0">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 mt-10 bg-white border border-gray-200 rounded-sm shadow-md w-48 p-3 gap-10 hidden transition-opacity duration-500">
                             <!-- Contenido del dropdown -->
-                            <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Bodegas</a>
+                            <a href="cajasBodegas" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Bodegas</a>
                             <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Frigorificos</a>
                             <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Alimentos</a>
                             <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Agroquimicos</a>
                             <a href="#" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Electrodomesticos</a>
                         </div>
+                    </li>
                     <li class=""><a href="" class="hover:text-amber-500 focus:text-amber-700 font-bold text-slate-300 text-xl">Produccion y desarrollo</a></li>
                     <li class=""><a href="" class="hover:text-amber-500 focus:text-amber-700 font-bold text-slate-300 text-xl">Presupuesto</a> </li>
                     <li class=""><a href="" class="hover:text-black focus:text-amber-700 font-bold text-slate-300 text-xl border-4 border-cyan-400 rounded-3xl hover:bg-cyan-500 p-3"> Contacto</li></a>
@@ -45,14 +46,14 @@
                 </button>
 
 
-                <div id="menu-responsive" class="hidden justify-center items-center flex-col w-64 right-0 top-36 rounded-lg fixed shadow-2xl">
+                <div id="menu-responsive" class="hidden justify-center items-center flex-col w-64 right-0 z-50 top-36 rounded-lg fixed shadow-2xl bg-slate-50">
                     <div id="boton-cerrar-menu" class="absolute top-3 right-3 hover:cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6 text-black relative ">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                     </div>
-                    <div class="mt-10">
-                        <ul class="flex flex-col gap-5 justify-cente items-center mb-10">
+                    <div class="mt-10 ">
+                        <ul class="flex flex-col gap-5 justify-cente items-center mb-10 ">
                             <li><a href="#" class="font-bold text-cyan-900 text-xl">Home</a></li>
                             <li><a href="#" class="font-bold text-cyan-900 text-xl">Productos</a></li>
                             <li><a href="#" class="font-bold text-cyan-900 text-xl">Produccion y desarrollo</a></li>
@@ -95,11 +96,11 @@ const ocultarDrop = ()=>{
 const toggleDrop = () => {
         clasesDropDown.classList.toggle("hidden");
         clasesDropDown.classList.toggle("block");
-        clasesDropDown.classList.toggle("");
+        //clasesDropDown.classList.toggle("");
 };
 
     dropDown.addEventListener("click", (event)=>{
-        event.preventDefault();
+        //event.preventDefault();
         toggleDrop();
 
     });
