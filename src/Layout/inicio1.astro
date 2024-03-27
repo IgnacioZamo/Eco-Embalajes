@@ -19,7 +19,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
 </div>
 
 
-<div class="swiper-container lg:w-4/5 w-10/12 mx-auto">
+<div class="swiper-container lg:w-4/5 w-10/12 mx-auto overflow-hidden">
     <div class="swiper-wrapper">
         <div class="swiper-slide slide-1 slide-item img-1">
             <Productos1 post = {{
@@ -57,7 +57,7 @@ import Tarjetas from "../components/tarjetaProd.astro";
     </p>
 </div>
 
-<div class="flex lg:gap-10 justify-around w-4/5 mx-auto my-10 items-center flex-wrap">
+<div class="flex lg:gap-10 max-w-full w-4/5 mx-auto my-10 items-center">
     <img src="https://www.packbox.com.ar/images/LAS-PERDICES-LOGO.webp" class="transition-transform duration-300 transform hover:scale-125 h-8" alt="">
     <Marcas logo={{img:"https://www.packbox.com.ar/images/ROWA-LOGO.webp"}}/>
     <Marcas logo={{img:"https://www.packbox.com.ar/images/FRIAR-LOGO.webp"}}/>
