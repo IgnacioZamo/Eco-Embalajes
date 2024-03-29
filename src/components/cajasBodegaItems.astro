@@ -1,0 +1,14 @@
+---
+const {cajasB: {title, desc, img}} = Astro.props;
+---
+
+<div class="grid grid-cols-2 p-5 items-center">
+    <div class="flex flex-col ">
+        <h1 class="text-2xl mb-3">{title}</h1>
+        <p>{desc}</p>
+    </div>
+    <div class="">
+        <img class="" src={img} alt="">
+    </div>
+    
+</div>

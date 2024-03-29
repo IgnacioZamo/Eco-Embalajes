@@ -1,6 +1,7 @@
 ---
 import Header from "../Layout/header.astro";
 import Footer from "../Layout/footer.astro";
+import CajasBodegasItems from "../components/cajasBodegaItems.astro"
 ---
 
 
@@ -9,12 +10,21 @@ import Footer from "../Layout/footer.astro";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BoxPaking - Cajas de bodega</title>
 </head>
 
     <body class="colorFondo">
 		<div id="cajasBodegas"></div>
 		<Header />
+        <div class="w-4/5 m-auto">
+            <CajasBodegasItems cajasB ={{title:"CAJAS PARA BODEGAS", 
+            desc:"Cajas y estuches para la industria vitivinícola. Atención de productores, bodegas y grandes vinotecas. Cajas a medida de cada botella. Estuches especiales para latas y copas.",
+            img:"https://www.packbox.com.ar/images/caja-aletas-mariposa-para-3-botellas-de-vino-blanco-sobre-marron-abierta-con-botellas-catalogo.webp"
+
+            }}/>
+
+        </div>
+
 
 		<Footer/>
 			
