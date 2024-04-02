@@ -1,0 +1,34 @@
+---
+import Header from "../Layout/header.astro";
+import Footer from "../Layout/footer.astro";
+import CajasBodegasItems from "../components/cajasBodegaItems.astro"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxPaking - Cajas para Agroquimicos</title>
+</head>
+
+    <body class="colorFondo">
+		<div id=""></div>
+		<Header />
+        <div class="lg:w-4/5 sm:w-10/12 w-full m-auto">
+            <CajasBodegasItems cajasB ={{title:"CAJAS PARA AGROQUÍMICOS", 
+            desc:"Ofrecemos una barrera confiable para proteger agroquímicos, mientras que procuramos una presentación visual impecable gracias a la calidad de impresión. Innovamos constantemente, fortaleciendo la integridad estructural y estética de nuestros productos, para potenciar su marca y producto en el mercado.",
+            img:"https://www.packbox.com.ar/images/Caja%20aletas%20simples-PHOSTRON.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"BAG IN BOX PARA AGROQUÍMICOS", 
+            desc:"Cajas para productos agroquímicos y químicos, diseñadas para bolsas de 1,5 a 20 litros. Sistema de válvula para Bag in Box superior o inferior. Su diseño, forma y materiales presentan una alta resistencia. Nuestros contenedores Bag in Box para coadyuvantes e inoculantes aumentan la imagen corporativa de su empresa brindando una óptima presentación.",
+            img:"https://www.packbox.com.ar/images/bib%20palmaline%205lts.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"CAJAS PARA BIDONES Y BOTELLAS", 
+            desc:"El diseño de cajas para bidones y botellas es a medida a partir de los envases utilizados para sus productos. El desarrollo parte del relevamiento de la composición de envases que irán dentro de la caja a fabricar, cuidando la resistencia del cartón corrugado para que soporte sin problemas el peso, y brindando valor mediante la impresión OFFSET.",
+            img:"https://www.packbox.com.ar/images/Caja%20aletas%20simples-LIGIER-web.webp"}}/>
+        </div>
+		<Footer/>
+	</body>
+    
+</html>

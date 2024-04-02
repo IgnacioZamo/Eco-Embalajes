@@ -1,0 +1,49 @@
+---
+import Header from "../Layout/header.astro";
+import Footer from "../Layout/footer.astro";
+import CajasBodegasItems from "../components/cajasBodegaItems.astro"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxPaking - Cajas para Frigorificos</title>
+</head>
+
+    <body class="colorFondo">
+		<div id=""></div>
+		<Header />
+        <div class="lg:w-4/5 sm:w-10/12 w-full m-auto">
+            <CajasBodegasItems cajasB ={{title:"CAJAS PARA FRIGORIFICOS", 
+            desc:"Producimos cajas en diversos formatos, adaptando el producto a las necesidades específicas de su marca. Pensados para ser empleados tanto en el mercado local como en operaciones de exportación. Su forma y materiales garantizan una resistencia óptima para almacenar, apilar y transportar productos cárnicos de manera eficiente.",
+            img:"https://www.packbox.com.ar/images/familia-de-tapas-para-frigorifico-cortes-de-carne-tapa-fondo.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"TAPA Y FONDO", 
+            desc:"Cajas telescópicas para distintos cortes de carne, en presentaciones de 5 a 25 kilogramos. Envases con fondo y tapa autoarmables al 100%, adecuados para cámaras frigoríficas y reefers, desempeñando un papel esencial en la cadena logística de la carne.",
+            img:"https://www.packbox.com.ar/images/tapa-fondo-frigorifico-marron-frigo90.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"ESTUCHES PARA HAMBURGUESAS", 
+            desc:"Disponibles en diversos tamaños, ofrecen practicidad y son ideales para destacar tu marca con impresiones personalizadas. Además, están diseñados para resistir las condiciones de humedad de freezers, heladeras y reefers. Eleva la experiencia del cliente con nuestros estuches premium.",
+            img:"https://www.packbox.com.ar/images/Estuche%20x4%20hamb%20P%20y%20N.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"AUTOARMABLES", 
+            desc:"Diseñadas para potenciar la eficiencia en el embalaje y el transporte de productos perecederos. Fabricadas con materiales de alta calidad, aseguran la preservación óptima en ambientes refrigerados.",
+            img:"https://www.packbox.com.ar/images/caja-aletas-mariposa-para-frigorifico-frig90.webp"}}/>
+
+            <CajasBodegasItems cajasB ={{title:"CAJAS PARA ENFRIADO Y CONGELADO", 
+            desc:"Descubre nuestras cajas especialmente creadas para enfrentar las condiciones de humedad en freezers, heladeras y reefers, tanto en la cadena logística como en centros de comercialización. Diseñadas a medida, se adaptan a los requisitos y dimensiones precisas de tu producto alimenticio.",
+            img:"https://www.packbox.com.ar/images/caja-de-carton-corrugado-resistente-a-la-humedad-para-corte-de-carne-y-frigorificos%20600px.webp"}}/>
+
+        </div>
+
+
+		<Footer/>
+			
+
+
+	</body>
+    
+
+</html>
