@@ -1,0 +1,79 @@
+---
+import Titulo from "../components/titulos.astro";
+import Header from "../Layout/header.astro";
+import Footer from "../Layout/footer.astro";
+import MenuPlegable from "../components/menuPlegable.astro";
+
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produccion y Desarrollo</title>
+</head>
+<body class="colorFondo">
+    <Header/>
+    <div class="w-full flex justify-center my-10">
+        <Titulo title={{tit:"ESPECIALIZACIÓN"}}/>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-2 flex flex-col w-4/5 mx-auto items-center mb-10">
+        <div class="flex flex-col justify-center p-5">
+            <h2 class="text-2xl font-bold mb-3">CALIDAD EN TIEMPO Y FORMA</h2>
+            <p class="text-xl">Nos especializamos en la producción de cajas de cartulina acopladas a cartón corrugado en distintas ondas, lo que nos permite ofrecer soluciones de empaque resistentes y duraderas para satisfacer las necesidades de nuestros clientes.</p>
+        </div>
+        <div>
+            <img src="https://www.packbox.com.ar/images/kba.webp" alt="">
+        </div>
+    </div>
+
+    <MenuPlegable menuPlegable={{
+        titPrincipal:"Impresion",
+        titSec:"Alta calidad en impresión para realzar tu marca.",
+        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
+        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
+        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
+        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
+
+    <MenuPlegable menuPlegable={{
+        titPrincipal:"Barnizado",
+        titSec:"Protección para el exterior de tu empaque.",
+        text:"El barnizado en cajas con impresión offset resalta la calidad y el atractivo visual, ofreciendo una capa protectora que mejora la durabilidad y la presentación. Con acabados brillante o mate, añade un toque distintivo profesional, realzando la imagen de su marca.",
+        img1:"https://www.packbox.com.ar/images/barniz.webp",
+        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
+        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
+
+    <MenuPlegable menuPlegable={{
+        titPrincipal:"Impresion",
+        titSec:"Alta calidad en impresión para realzar tu marca.",
+        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
+        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
+        img2:"https://www.packbox.com.ar/images/barniz-bodegas-lopez.webp",
+        img3:"https://www.packbox.com.ar/images/barniz-oso-negro.webp"}}/>
+
+    <MenuPlegable menuPlegable={{
+        titPrincipal:"Impresion",
+        titSec:"Alta calidad en impresión para realzar tu marca.",
+        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
+        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
+        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
+        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
+
+
+
+
+
+    <Footer/>
+</body>
+</html>
+
+
+<style>
+	.colorFondo {
+		background-color: #F3F5FA;
+	}
+</style>
+

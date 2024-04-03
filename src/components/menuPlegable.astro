@@ -1,0 +1,71 @@
+---
+const {menuPlegable: {titPrincipal, titSec, text, img1,img2,img3 }} = Astro.props;
+---
+
+<!-- boton exterior -->
+<div class="menuPlegable w-4/5 mx-auto border rounded-lg border-slate-400 hover:cursor-pointer">
+    <div class="flex justify-between">
+        <h4 class="text-lg py-3 pl-5">{titPrincipal}</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 my-auto mr-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+        </svg>
+    </div>
+    <!-- interior boton -->
+    <div class="interiorMenu grid-cols-2 justify-center items-center hidden duration-500 ease-in-out">
+        <section class="flex flex-col border mx-auto">
+            <h3 class="text-xl font-bold mb-5 my-auto">{titSec}</h3>
+            <p>{text}</p>
+        </section>
+        <div class="swiper-container w-3/5 mx-auto h-44 flex justify-center border-collapse overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-1 slide-item img-1">
+                    <img class="h-40" src={img1} alt="">
+                </div>
+                <div class="swiper-slide slide-2 slide-item img-2">
+                    <img class="h-40" src={img2} alt="">
+                </div>
+                <div class="swiper-slide slide-3 slide-item img-3">
+                    <img class="h-40" src={img3} alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- Importa el CSS de Swiper.js -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Importa el JS de Swiper.js y inicializa el slider -->
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper (".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    // Cambia el efecto de transición a "cube" o "coverflow"
+    effect: 'slide',
+    slidesPerView: 1, // Muestra solo una diapositiva a la vez
+    centeredSlides: true, // Centra el slider activo
+});
+</script>
+
+<script>
+    const botonMenuPlegable = document.querySelector(".menuPlegable");
+    
+    const interiorMenu = document.querySelector(".interiorMenu");
+
+    botonMenuPlegable.addEventListener("click",()=>{
+        interiorMenu.classList.toggle("hidden");
+        interiorMenu.classList.toggle("grid");
+        
+    })
+</script>
