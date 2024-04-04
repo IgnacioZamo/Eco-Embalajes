@@ -1,0 +1,125 @@
+---
+import Titulo from "../components/titulos.astro";
+import Header from "../Layout/header.astro";
+import Footer from "../Layout/footer.astro";
+import Contacto from "../Layout/seccionContacto.astro"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+</head>
+<body>
+    <Header/>
+
+    <div class="w-full flex justify-center my-10">
+        <Titulo title={{tit:"INSTRUCCIONES PARA SOLICITAR PRESUPUESTO"}}/>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-2 flex flex-col w-4/5 mx-auto my-8">
+        <div class="flex justify-center items-center font-semibold">
+            <p class="text-center text-lg">Al solicitar una cotización, <br>
+                 <u>le recomendamos proporcionar los detalles técnicos esenciales:</u> Esto nos permitirá ofrecerle una propuesta precisa y personalizada para satisfacer sus necesidades. Su colaboración nos facilitará un proceso eficiente que garantice una cotización ajustada a sus requisitos. <br>
+                ¡Estamos aquí para brindarle la mejor solución posible!</p>
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="https://www.packbox.com.ar/images/solicitud-presupuesto-banner.webp" alt="">
+        </div>
+    </div>
+
+    <Contacto/>
+
+
+    <!-- INSTRUCCIONES GENERALES -->
+    <div class="w-full bg-gradient-to-r from-blue-100 to-blue-50 py-10">
+        <div class="w-full flex justify-center my-10">
+            <Titulo title={{tit:"INSTRUCCIONES GENERALES"}}/>
+        </div>
+        <div class="lg:grid lg:grid-cols-2 flex flex-col w-4/5 mx-auto">
+            <div class="py-5">
+                <ol class="list-decimal flex flex-col gap-5">
+                    <li class="font-semibold">Identifica tus necesidades:
+                        <ul class="list-disc pl-5">
+                            <li class="font-normal">Determina el tipo de caja requerida y las dimensiones (largo,ancho y altura).</li>
+                            <li class="font-normal">Analiza el uso previsto de las cajas, ya sea para transporte, almacenamiento o exhibición de productos.</li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold">Especificaciones técnicas:
+                        <ul class="list-disc pl-5">
+                            <li class="font-normal">Indica el peso aproximado de los productos que se colocarán en las cajas.</li>
+                            <li class="font-normal">Informa también sobre cualquier requisito de estiba, y menciona condiciones ambientales relevantes como humedad o temperatura.</li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold">Diseño y personalización:
+                        <ul class="list-disc pl-5">
+                            <li class="font-normal">Menciona si necesitas impresión personalizada, colores específicos, logotipo de tu empresa u otra información de identificación.</li>
+                            <li class="font-normal">Especifica cualquier característica o detalle adicional necesario, como asas, perforaciones o divisiones internas.</li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold">Volumen de pedido y plazos:
+                        <ul class="list-disc pl-5">
+                            <li class="font-normal">Indica la cantidad aproximada de cajas a solicitar y la fecha límite para la entrega.</li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold">Envío de la solicitud de cotización:
+                        <ul class="list-disc pl-5">
+                            <li class="font-normal">Envía todo lo mencionado anteriormente al equipo de ventas o al correo de contacto designado para solicitar cotizaciones.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="flex justify-center items-center">
+                <img src="https://www.packbox.com.ar/images/solicitud-presupuesto-instrucciones.webp" class=" duration-300 hover:scale-110"alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- REQUISITOS BASICOS -->
+
+    <div class="lg:grid lg:grid-cols-2 flex flex-col w-4/5 mx-auto py-10">
+        <div class="py-5">
+            <ol class="list-decimal flex flex-col gap-5">
+                <li class="font-semibold">Cantidad mínima requerida:
+                    <ul class="list-disc pl-5">
+                        <li class="font-normal">Realizamos cotizaciones para cantidades mínimas que parten en las 2000, 3000 unidades o más, dependiendo del tamaño de la caja.</li>                        
+                    </ul>
+                </li>
+                <li class="font-semibold">Medidas de la caja:
+                    <ul class="list-disc pl-5">
+                        <li class="font-normal">Proporcione las medidas de la caja en centímetros o milímetros, especificando el largo, ancho y alto requeridos.</li>
+                    </ul>
+                </li>
+                <li class="font-semibold">Contenido, estiba y función de la caja:
+                    <ul class="list-disc pl-5">
+                        <li class="font-normal">Describa el contenido que se colocará en las cajas y cómo se apilarán.</li>
+                        <li class="font-normal">Indique el peso aproximado del contenido.</li>
+                        <li class="font-normal">Especifique las funciones de la caja, como transporte, almacenamiento, presentación o marketing.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="https://www.packbox.com.ar/images/solicitud-presupuesto-instrucciones2.webp" class=" duration-300 hover:scale-110"alt="">
+        </div>
+    </div>
+
+
+
+    <Footer/>
+    
+</body>
+</html>
+
+
+
+<style>
+    
+    .fondoFooter {
+        background-color: #324362;
+    }
+</style>
