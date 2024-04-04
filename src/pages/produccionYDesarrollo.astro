@@ -14,7 +14,7 @@ import MenuPlegable from "../components/menuPlegable.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produccion y Desarrollo</title>
 </head>
-<body class="colorFondo">
+<body class="">
     <Header/>
     <div class="w-full flex justify-center my-10">
         <Titulo title={{tit:"ESPECIALIZACIÓN"}}/>
@@ -30,39 +30,108 @@ import MenuPlegable from "../components/menuPlegable.astro";
         </div>
     </div>
 
-    <MenuPlegable menuPlegable={{
-        titPrincipal:"Impresion",
-        titSec:"Alta calidad en impresión para realzar tu marca.",
-        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
-        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
-        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
-        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
 
-    <MenuPlegable menuPlegable={{
-        titPrincipal:"Barnizado",
-        titSec:"Protección para el exterior de tu empaque.",
-        text:"El barnizado en cajas con impresión offset resalta la calidad y el atractivo visual, ofreciendo una capa protectora que mejora la durabilidad y la presentación. Con acabados brillante o mate, añade un toque distintivo profesional, realzando la imagen de su marca.",
-        img1:"https://www.packbox.com.ar/images/barniz.webp",
-        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
-        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
+    <div class="my-24">
+        <MenuPlegable menuPlegable={{
+            titPrincipal:"Impresion",
+            titSec:"Alta calidad en impresión para realzar tu marca.",
+            text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
+            img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
+            img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
+            img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
 
-    <MenuPlegable menuPlegable={{
-        titPrincipal:"Impresion",
-        titSec:"Alta calidad en impresión para realzar tu marca.",
-        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
-        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
-        img2:"https://www.packbox.com.ar/images/barniz-bodegas-lopez.webp",
-        img3:"https://www.packbox.com.ar/images/barniz-oso-negro.webp"}}/>
+        <MenuPlegable menuPlegable={{
+            titPrincipal:"Barnizado",
+            titSec:"Protección para el exterior de tu empaque.",
+            text:"El barnizado en cajas con impresión offset resalta la calidad y el atractivo visual, ofreciendo una capa protectora que mejora la durabilidad y la presentación. Con acabados brillante o mate, añade un toque distintivo profesional, realzando la imagen de su marca.",
+            img1:"https://www.packbox.com.ar/images/barniz-bodegas-lopez.webp",
+            img2:"https://www.packbox.com.ar/images/barniz-oso-negro.webp",
+            img3:"https://www.packbox.com.ar/images/barniz.webp"}}/>
 
-    <MenuPlegable menuPlegable={{
-        titPrincipal:"Impresion",
-        titSec:"Alta calidad en impresión para realzar tu marca.",
-        text:"La impresión offset destaca por su elevada calidad, ofreciendo resultados nítidos y consistentes en una amplia gama de sustratos, tamaños y disposiciones. Con una reproducción precisa de detalles y colores, es ideal para proyectos que requieren una presentación profesional y duradera.",
-        img1:"https://www.packbox.com.ar/images/zoom-impresion-offset.webp",
-        img2:"https://www.packbox.com.ar/images/imprenta%20offset.webp",
-        img3:"https://www.packbox.com.ar/images/plancha-de-offset.webp"}}/>
+        <MenuPlegable menuPlegable={{
+            titPrincipal:"Laca UV",
+            titSec:"Brillo y protección que potencian el diseño de tu packaging.",
+            text:"La aplicación de Laca UV por serigrafía proporciona un acabado de alta calidad y resistencia, ofreciendo una apariencia brillante y duradera que realza la presentación del producto. Esta técnica, tanto completa como sectorizada, permite destacar detalles precisos añadiendo un toque de sofisticación.",
+            img1:"https://www.packbox.com.ar/images/laca-uv-sectorizada.webp",
+            img2:"https://www.packbox.com.ar/images/laca-uv-sectorizada-oso-negro.webp",
+            img3:"https://www.packbox.com.ar/images/laca-uv-sectorizado-tolsa.webp"}}/>
+
+        <MenuPlegable menuPlegable={{
+            titPrincipal:"Laminado OPP",
+            titSec:"Mayor protección contra la humedad.",
+            text:"El laminado OPP en caliente añade una capa protectora que mejora la resistencia, la exposición de las cajas a la humedad y la durabilidad. Este proceso proporciona un acabado brillante o mate que resalta los diseños y colores, asegurando una imagen de marca impactante.",
+            img1:"https://www.packbox.com.ar/images/laminado-opp-parasol.webp",
+            img2:"https://www.packbox.com.ar/images/laminado-opp.webp",
+            img3:"https://www.packbox.com.ar/images/laminado-opp-caja-aletas-simples.webp"}}/>
+    </div>
 
 
+    <!-- seccion 'COMPROMETIDOS CON LA CALIDAD' -->
+
+    <div class="w-full flex justify-center my-10">
+        <Titulo title={{tit:"COMPROMETIDOS CON LA CALIDAD"}}/>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-2 flex flex-col justify-center items-center w-4/5 mx-auto">
+        <div class="flex flex-col gap-5 mx-auto">
+            <h6 class="font-bold ">Aseguramos resultados precisos y consistentes en cada proyecto. Ya sea que necesite cajas personalizadas o productos estándar, puede confiar en nosotros para obtener el mejor resultado.
+            </h6>
+            <p>En nuestra área técnica nos enfocamos en la mejora continua para garantizar que nuestros productos cumplan con los estándares más exigentes. Nos enorgullece ofrecer un servicio de impresión de alta calidad que se basa en el uso de tecnologías y software de medición de color Xrite y flujos de trabajo de clase mundial bajo la norma ISO 12647-7 ContractProof Media Wedge.</p>
+        </div>
+        <div class="">
+            <img class="mx-auto" src="https://www.packbox.com.ar/images/pantoneras-500.webp" alt="">
+        </div>
+    </div>
+
+     <!-- seccion 'FLUJO DE TRABAJO' -->
+
+    <div class="w-4/5 mx-auto flex flex-col justify-center my-3">
+        <div class="flex justify-center mb-5">
+            <Titulo title={{tit:"FLUJO DE TRABAJO"}}/>
+        </div>
+        <p class="text-center">A continuación, te contamos los pasos que seguimos para desarrollar tu packaging a medida con la más alta calidad de impresión y resistencia de material.</p>
+    </div>
+
+    <div class=" w-4/5 mx-auto grid grid-cols-3 gap-2 justify-center mb-10">
+        <div class="col-span-3 mx-auto"><img class="w-screen px-10 " src="https://www.packbox.com.ar/images/GRAF%20horizontal.webp" alt=""></div>
+        <div class="col-span-1">
+            <div class="flex flex-col mx-auto">
+                <h6 class="font-bold  pl-5 mb-4">COTIZACIÓN</h6>
+                <ul class="list-disc  pl-5">
+                    <li>Relevamiento del producto</li>
+                    <li>Diseño preliminar de plano + 3d</li>
+                    <li>Presupuesto</li>
+                    <li>Alta de cliente y definición de condiciones comerciales</li>
+                    <li>Confección de Factura Proforma</li>
+                    <li>Facturación y pago</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-span-1 ">
+            <div class="flex flex-col mx-auto">
+                <h6 class="font-bold pl-5 mb-4">DISEÑO</h6>
+                <ul class="list-disc pl-5 ">
+                    <li>Planimetría</li>
+                    <li>Fabricación de prototipos físicos dimensionales</li>
+                    <li>Aprobación de prototipos</li>
+                    <li>Imposición de Arte sobre plano</li>
+                    <li>Envío y aprobación vistas de impresión</li>                    
+                </ul>
+            </div>
+        </div>
+        <div class="col-span-1 ">
+            <div class="flex flex-col mx-auto">
+                <h6 class="font-bold  mb-4">PRODUCCIÓN, DESPACHO Y TRAZABILIDAD</h6>
+                <ul class="list-disc  pl-5">
+                    <li>Inicio de la Producción</li>
+                    <li>Despacho a cliente o ingreso a guarda para Picking</li>
+                    <li>Envío de final de producción con informe correspondiente</li>
+                    <li>Control de calidad</li>
+                    <li>Protocolo de Trazabilidad</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 

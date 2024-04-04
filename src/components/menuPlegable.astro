@@ -2,20 +2,21 @@
 const {menuPlegable: {titPrincipal, titSec, text, img1,img2,img3 }} = Astro.props;
 ---
 
-<!-- boton exterior -->
-<div class="menuPlegable w-4/5 mx-auto border rounded-lg border-slate-400 hover:cursor-pointer">
-    <div class="flex justify-between">
-        <h4 class="text-lg py-3 pl-5">{titPrincipal}</h4>
+
+<div class="contenedorPlegable w-4/5 mx-auto border rounded-lg border-slate-400 ">
+    <!-- boton exterior -->
+    <div class="menuPlegable hover:cursor-pointer flex justify-between">
+        <h4 class="text-lg py-3 pl-5 font-bold">{titPrincipal}</h4>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 my-auto mr-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
         </svg>
     </div>
     <!-- interior boton -->
-    <div class="interiorMenu grid-cols-2 justify-center items-center hidden duration-500 ease-in-out">
-        <section class="flex flex-col border mx-auto">
+    <div class="interiorMenu grid-cols-2 justify-center items-center hidden">
+        <div class="flex w-10/12 justify-center items-center mx-auto flex-col">
             <h3 class="text-xl font-bold mb-5 my-auto">{titSec}</h3>
             <p>{text}</p>
-        </section>
+        </div>
         <div class="swiper-container w-3/5 mx-auto h-44 flex justify-center border-collapse overflow-hidden">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide-1 slide-item img-1">
@@ -43,11 +44,6 @@ const {menuPlegable: {titPrincipal, titSec, text, img1,img2,img3 }} = Astro.prop
   new Swiper (".swiper-container", {
     direction: "horizontal",
     loop: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
     autoplay: {
         delay: 3000,
     },
@@ -59,13 +55,13 @@ const {menuPlegable: {titPrincipal, titSec, text, img1,img2,img3 }} = Astro.prop
 </script>
 
 <script>
-    const botonMenuPlegable = document.querySelector(".menuPlegable");
+    const botonesMenuPlegable  = document.querySelectorAll(".menuPlegable");
     
-    const interiorMenu = document.querySelector(".interiorMenu");
-
-    botonMenuPlegable.addEventListener("click",()=>{
-        interiorMenu.classList.toggle("hidden");
-        interiorMenu.classList.toggle("grid");
-        
-    })
+    botonesMenuPlegable.forEach(boton => {
+        const interiorMenu = boton.nextElementSibling;
+        boton.addEventListener("click", () => {
+            interiorMenu.classList.toggle("hidden");
+            interiorMenu.classList.toggle("grid");
+        });
+    });
 </script>
