@@ -1,0 +1,8 @@
+---
+const {itemContacto: {nombre, a}} = Astro.props;
+---
+
+<div class="flex flex-col gap-2">
+    <label for={a}>{nombre}</label>
+    <input name={a} id={a} class="border border-blue-800 rounded-xl h-8 w-auto" type="text">
+</div>
