@@ -3,6 +3,8 @@ import Titulo from "../components/titulos.astro";
 import Header from "../Layout/header.astro";
 import Footer from "../Layout/footer.astro";
 import ItemContacto from "../components/itemContacto.astro";
+import itemContacto2 from "../components/itemContacto2.astro"
+import ItemContacto2 from "../components/itemContacto2.astro";
 
 ---
 
@@ -22,8 +24,9 @@ import ItemContacto from "../components/itemContacto.astro";
     </div>
 
 
-    <div class=" w-4/5 mx-auto lg:grid lg:grid-cols-2 flex flex-col border py-16">
-        <div class="p-10">
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class=" w-4/5 mx-auto lg:grid lg:grid-cols-2 flex flex-col border py-8">
+        <div class="px-10 py-5">
             <div class="grid grid-cols-2 gap-10">
                 <div class="">
                     <ItemContacto itemContacto = {{nombre:"Nombre", a:"nombre"}}/>
@@ -46,22 +49,49 @@ import ItemContacto from "../components/itemContacto.astro";
             <div class="mt-10">
                 <ItemContacto itemContacto = {{nombre:"Ciudad", a:"ciudad"}}/>
             </div>
-            <div class="mt-10">
-                <ItemContacto itemContacto = {{nombre:"Producto", a:"producto"}}/>
+            <form class="mt-10 flex flex-col gap-2" action="" method="POST">
+                <label class="" for="producto">Producto:</label>
+                <select class="border border-blue-800 rounded-xl h-8 w-auto pl-2" id="producto" name="producto">
+                  <option value="opcion1">Cajas</option>
+                  <option value="opcion2">Bag in box</option>
+                  <option value="opcion3">Cajas p/bidones y botellas</option>
+                  <option value="opcion3">Cajas p/ frigorificos</option>
+                  <option value="opcion3">Cajas p/ bodegas</option>
+                  <option value="opcion3">Cajas p/ electrodomesticos</option>
+                  <option value="opcion3">Parasoles publicitarios</option>
+                  <option value="opcion3">Valijines navideños</option>
+                  <option value="opcion3">Otros productos</option>
+                </select>
+            </form>
+
+            <form class="mt-10 flex flex-col gap-2" action="" method="POST">
+                <label class="" for="producto">Mensaje:</label>
+                <textarea class="border border-blue-800 rounded-xl p-2" placeholder="Ingresa tu comentario" rows="7" cols="50"></textarea>
+            </form>
+
+            <!-- boton -->
+            <div class="flex justify-center py-12">
+                <button type="submit" class="border-2 text-slate-100 bg-sky-700 trnasform hover:bg-sky-900 rounded-2xl px-4 py-2">Enviar Consulta</button>
+            </div>
+
+
+
+
+
+
+            
+        </div>
+        <div class="px-10 py-5">
+            <ItemContacto2 itemContacto2 = {{title:"Email:", text:"holabuendia@hotmail.com", img:"https://static.vecteezy.com/system/resources/thumbnails/010/056/094/small_2x/email-and-mail-icon-sign-symbol-design-free-png.png"}}/>
+            <ItemContacto2 itemContacto2 = {{title:"Telefono:", text:"023 456852 48", img:"https://images.vexels.me/media/users/3/205069/isolated/preview/f207045d96c258fed664305f0ac2c5bd-telephone-handset-blue-icon.png"}}/>
+            <ItemContacto2 itemContacto2 = {{title:"Whatsapp:", text:"023 456852 48", img:"https://cdn-icons-png.flaticon.com/512/174/174879.png"}}/>
+            <ItemContacto2 itemContacto2 = {{title:"Administracion:", text:"Av. Siempre Viva 1234, CP3000 Santa Fe, Provincia de Santa Fe, República Argentina", img:"https://cdn-icons-png.flaticon.com/512/535/535188.png"}}/>
+
+            <div class="flex justify-center items-center mt-10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108717.99162652927!2d-60.81847593787691!3d-31.621876772926395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5a9adc40888e1%3A0xdcf7761e8d02804a!2sSanta%20Fe%20de%20la%20Vera%20Cruz%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1712541299181!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-
     </div>
-
-
-
-
-
-
-
-
-
-
 
 
     <Footer/>
