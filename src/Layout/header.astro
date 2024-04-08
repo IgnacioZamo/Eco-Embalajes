@@ -8,10 +8,12 @@
         <!-- Logo izquierdo del header -->
         <div class="flex h-full w-full justify-between">
             <div class="flex justify-center items-center  w-1/3 h-auto">
-                <div class=" flex flex-row transition-transform duration-300 transform hover:scale-125 gap-5">
-                    <h1 class="font-bold my-auto text-xl text-slate-100 cursor-pointer">Box PaKing</h1>
-                    <img src="https://svgsilh.com/svg/42185.svg" class="h-20 w-20 my-auto text-amber-400" alt="">
-                </div>
+                <a href="/">
+                    <div class=" flex flex-row transition-transform duration-300 transform hover:scale-125 gap-5">
+                        <h1 class="font-bold my-auto text-xl text-slate-100 cursor-pointer">Box PaKing</h1>
+                        <img src="https://svgsilh.com/svg/42185.svg" class="h-20 w-20 my-auto text-amber-400" alt="">
+                    </div>
+                </a>
             </div>
 
             <!-- Menu derecho del header -->
@@ -55,12 +57,21 @@
                         </svg>
                     </div>
                     <div class="mt-10 ">
-                        <ul class="flex flex-col gap-5 justify-cente items-center mb-10">
+                        <ul class="flex flex-col gap-5 justify-center items-center mb-10">
                             <li><a href="/" class="font-bold text-cyan-900 text-xl">Home</a></li>
-                            <li><a href="#" class="font-bold text-cyan-900 text-xl">Productos</a></li>
+                            <li><p class="font-bold text-cyan-900 text-xl cursor-pointer">Productos</p>
+                                <!-- dropdown PRODUCTOS de menu responsive -->
+                                <ul id="dropdownMenuResponsive" class="hidden pt-2">
+                                    <a href="/cajasBodegas" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Bodegas</a>
+                                    <a href="/cajasFrigorificos" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Frigorificos</a>
+                                    <a href="/cajasAlimentos" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Alimentos</a>
+                                    <a href="/cajasAgroquimicos" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Agroquimicos</a>
+                                    <a href="/cajasElectrodomesticos" class="block text-cyan-700 text-sm mb-2 hover:bg-gray-200">Cajas para Electrodomesticos</a>
+                                </ul>    
+                            </li>
                             <li><a href="/produccionYDesarrollo" class="font-bold text-cyan-900 text-xl">Produccion y desarrollo</a></li>
                             <li><a href="/presupuesto" class="font-bold text-cyan-900 text-xl">Presupuesto</a></li>
-                            <li><a href="#" class="font-bold text-cyan-900 text-xl">Contacto</a></li>
+                            <li><a href="/contacto" class="font-bold text-cyan-900 text-xl">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,6 +90,22 @@
 
 
 <script>
+
+
+const dropDownMenuResponsive = document.getElementById("dropdownMenuResponsive")
+
+const ocultarMostrarDPMenuResponsive = ()=>{
+    
+    dropDownMenuResponsive.classList.toggle("hidden");
+    dropDownMenuResponsive.classList.toggle("block");
+}
+
+const menuListProductos = dropDownMenuResponsive.parentNode;
+menuListProductos.addEventListener("click",(e)=>{
+    ocultarMostrarDPMenuResponsive();
+})
+
+
 
 const dropDown = document.getElementById("productosDropdown")
 const clasesDropDown = dropDown.querySelector(".absolute");

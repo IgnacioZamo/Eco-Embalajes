@@ -3,12 +3,12 @@ const {itemContacto2: {img, title,text}} = Astro.props
 ---
 
 <div class="grid grid-cols-4 w-4/5 mx-auto my-5">
-    <div class="flex pr-5 items-center">
-        <img class="h-16" src={img} alt="">
+    <div class="lg:col-span-1 col-span-2 flex pr-5 items-center">
+        <img class="lg:h-16 h-10" src={img} alt="">
     </div>
-    <div class="col-span-3">
-        <h5 class="text-2xl font-bold text-blue-900">{title}</h5>
-        <p class="text-lg">{text}</p>
+    <div class="lg:col-span-3 sm:col-span-2 col-span-3">
+        <h5 class="lg:text-2xl text-lg font-bold text-blue-900">{title}</h5>
+        <p class="lg:text-lg sm:text-base text-sm">{text}</p>
     </div>
 </div>
 <hr>
