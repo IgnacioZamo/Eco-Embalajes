@@ -3,13 +3,23 @@ import Titulo from "../components/titulos.astro";
 ---
 
 
-<div class="py-12 border border-gray-200 bg-slate-100">
+<div style="overflow: hidden;">
+    <svg
+      preserveAspectRatio="none"
+      viewBox="0 0 1200 120"
+      xmlns="http://www.w3.org/2000/svg"
+      style="fill: #e2e8f0; width: 125%; height: 100px; transform: rotate(180deg);"
+    >
+      <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
+    </svg>
+  </div>
+<div class="py-12 bg-slate-200">
     <div class="grid lg:grid-cols-3 w-4/5 mx-auto justify-items-center gap-5 lg:gap-0">
         <div class="">
             <h3 class="lg:text-start text-center"><Titulo title={{tit:"BOX PAKING"}}/></h3>
-            <p class="text-cyan-900 mt-3 "><strong>Whatsapp:</strong> 0342-155544466</p>
-            <p class="text-cyan-900"><strong>Email:</strong> holabuendia@hotmail.com</p>
-            <p class="text-cyan-900"><strong>Direccion:</strong> Av. Siempre Viva 1234</p>
+            <p class="colorsubTitulo mt-3 "><strong>Whatsapp:</strong> 0342-155544466</p>
+            <p class="colorsubTitulo"><strong>Email:</strong> holabuendia@hotmail.com</p>
+            <p class="colorsubTitulo"><strong>Direccion:</strong> Av. Siempre Viva 1234</p>
             <div class="py-5 flex lg:gap-3 justify-between">
                 <img class="h-8" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="">
                 <img class="h-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="">
@@ -19,26 +29,26 @@ import Titulo from "../components/titulos.astro";
         <div class="">
             <h4 class="text-xl colorsubTitulo font-bold lg:text-start text-center">Acerca de nosotros</h4>
             <div class="flex flex-col gap-1">
-                <p class="text-cyan-900 mt-3"><a href="/">Home</a></p>
-                <p class="text-cyan-900"><a href="/#about">Quienes somos</a></p>
-                <p class="text-cyan-900"><a href="/produccionYDesarrollo">Produccion y desarrollo</a></p>
+                <p class="colorsubTitulo mt-3"><a href="/">Home</a></p>
+                <p class="colorsubTitulo"><a href="/#about">Quienes somos</a></p>
+                <p class="colorsubTitulo"><a href="/produccionYDesarrollo">Produccion y desarrollo</a></p>
             </div>
         </div>
         <div class="">
             <h4 class="text-xl colorsubTitulo font-bold lg:text-start text-center">Productos</h4>
             <div class="flex flex-col gap-1">
-                <p class="text-cyan-900 mt-3"><a href="/cajasBodegas">Cajas para bodegas</a></p>
-                <p class="text-cyan-900"><a href="/cajasFrigorificos">Cajas para Frigorificos</a></p>
-                <p class="text-cyan-900"><a href="cajasAlimentos">Cajas para Alimentos</a></p>
-                <p class="text-cyan-900"><a href="cajasAgroquimicos">Cajas para Agroquímicos</a></p>
-                <p class="text-cyan-900"><a href="cajasElectrodomesticos">Cajas para Electrodomésticos</a></p>
+                <p class="colorsubTitulo mt-3"><a href="/cajasBodegas">Cajas para bodegas</a></p>
+                <p class="colorsubTitulo"><a href="/cajasFrigorificos">Cajas para Frigorificos</a></p>
+                <p class="colorsubTitulo"><a href="cajasAlimentos">Cajas para Alimentos</a></p>
+                <p class="colorsubTitulo"><a href="cajasAgroquimicos">Cajas para Agroquímicos</a></p>
+                <p class="colorsubTitulo"><a href="cajasElectrodomesticos">Cajas para Electrodomésticos</a></p>
             </div>
         </div>
     </div>
 </div>
-<div class="w-full border py-5 pl-10 fondoFooter">
+<div class="w-full border py-5 pl-10 bg-gradient-to-r from-teal-600 to-emerald-900">
     <p class="text-slate-200">
-        © Copyright box PaKING. Todos los derechos reservados
+        ©Copyright EcoEmbalajes . Todos los derechos reservados
     </p>
 </div>
 
@@ -48,6 +58,6 @@ import Titulo from "../components/titulos.astro";
     }
 
     .fondoFooter {
-        background-color: #324362; 
+        background-color: #6b6902; 
     }
 </style>
